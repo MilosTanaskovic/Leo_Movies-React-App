@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Dancing With The React</h1>
+      <h1>Dancing With The React!</h1>
       <h2>LeoMovies App</h2>
     </div>
   );
