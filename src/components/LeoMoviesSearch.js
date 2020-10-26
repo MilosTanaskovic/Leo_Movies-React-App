@@ -16,13 +16,13 @@ export const LeoMoviesSearch = () => {
 
   // axios
  
-   // axios({
-   //  method: 'GET',
-   //  url: `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_LEO_MOVIES_TMDB_API}&language=en-US&page=1&include_adult=false&query=${e.target.value}`
-   // }).then((res) => {
-   //  setResult(res.data);
-   //  console.log(setResult(res.data.result));
-   // })
+  //  axios({
+  //   method: 'GET',
+  //   url: `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_LEO_MOVIES_TMDB_API}&language=en-US&page=1&include_adult=false&query=${e.target.value}`
+  //  }).then((res) => {
+  //   setResults(res.data.results);
+  //   console.log(setResults(res.data.result));
+  //  })
  
 
  // fetch
