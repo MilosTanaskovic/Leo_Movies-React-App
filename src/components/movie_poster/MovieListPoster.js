@@ -1,0 +1,14 @@
+import React from 'react'
+
+import Movie from './Movie';
+
+const MovieListPoster = ({movie, type}) => {
+ return (
+  <div className="movie-poster">
+  <div className="overlay"></div>
+   <Movie movie={movie} type={type}/>
+  </div>
+ )
+}
+
+export default MovieListPoster

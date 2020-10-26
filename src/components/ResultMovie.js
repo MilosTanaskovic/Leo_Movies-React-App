@@ -1,4 +1,6 @@
 import React, { useContext } from 'react'
+//import component
+import Movie from './movie_poster/Movie';
 // import context
 import { GlobalContext } from '../context/GlobalState';
 
@@ -12,13 +14,7 @@ export const ResultMovie = ({movie}) => {
   <div className='result-movie'>
     {/* Poster Movies */} 
     <div className='poster-wrapper'>
-     { movie.poster_path ? (
-      <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} 
-      alt={`${movie.title}`}
-      />
-     ) : (
-      <div className="filler-poster"></div>
-     )}
+     <Movie movie={movie}/>
     </div>
     {/* Info for each Poster Movie */}
     <div className="info">
