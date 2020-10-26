@@ -3,8 +3,12 @@ import AppReducer from './AppReducer';
 
 //  initial state - is going to be of our store
 const initialState = {
- watchlist : [],
- favouritemovie : []
+ watchlist : localStorage.getItem('watchlist') 
+ ? JSON.parse(localStorage.getItem('watchlist'))
+ : [],
+ favouritemovie : localStorage.getItem('favouritemovie') 
+ ? JSON.parse(localStorage.getItem('favouritemovie'))
+ : []
 }
 
 // create context
@@ -13,6 +17,13 @@ export const GlobalContext = createContext(initialState);
 // provider components
 export const GlobalProvider = (props) => {
  const [state, dispatch] = useReducer(AppReducer, initialState)
+
+ useEffect(() => {
+  // store watchlist
+  localStorage.setItem('watchlist', JSON.stringify(state.watchlist));
+  // store favouritemovie
+  localStorage.setItem('favouritemovie', JSON.stringify(state.favouritemovie));
+ }, [state]);
 
  // action when we're click on btn
  const addMovieToWatchList = (movie) => {
