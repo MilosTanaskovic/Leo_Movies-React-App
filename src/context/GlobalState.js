@@ -33,9 +33,47 @@ export const GlobalProvider = (props) => {
    payload: movie
   });
  }
-
+ // remove movie
+ const removeMovieFromWatchList = (id) => {
+  dispatch({
+   type: 'REMOVE_MOVIE_FROM_WATCHLIST',
+   payload: id
+  });
+ }
+ // add to favourite movie
+ const addMovieToFavouritemovie = (movie) => {
+  dispatch({
+   type: 'ADD_MOVIE_TO_FAVOURITEMOVIE',
+   payload: movie
+  })
+ }
+ // move to watchlist
+ const moveToWatchlist = (movie) => {
+  dispatch({
+   type: 'MOVE_TO_WATCHLIST',
+   payload: movie
+  })
+ }
+ // remove from FavouritesMov page
+ const removeFromFavouritesMov = (id) => {
+  dispatch({
+   type: 'REMOVE_FROM_FAVOURITESMOV',
+   payload: id
+  })
+ }
  return(
-  <GlobalContext.Provider value={{watchlist: state.watchlist, favouritemovie: state.favouritemovie, addMovieToWatchList }}>
+  <GlobalContext.Provider 
+  value={
+    { 
+     watchlist: state.watchlist, 
+     favouritemovie: state.favouritemovie, 
+     addMovieToWatchList,
+     removeMovieFromWatchList,
+     addMovieToFavouritemovie,
+     moveToWatchlist,
+     removeFromFavouritesMov 
+    }
+   }>
    {props.children}
   </GlobalContext.Provider>
  )

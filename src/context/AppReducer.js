@@ -7,6 +7,29 @@ export default (state, action) => {
     ...state,
     watchlist: [action.payload, ...state.watchlist],
    };
+  case 'REMOVE_MOVIE_FROM_WATCHLIST':
+    return {
+      ...state,
+      watchlist: state.watchlist.filter((movie) => movie.id !== action.payload)
+    }
+  case 'ADD_MOVIE_TO_FAVOURITEMOVIE':
+    return {
+      ...state,
+      watchlist: state.watchlist.filter((movie) => movie.id !== action.payload.id),
+      favouritemovie: [action.payload, ...state.favouritemovie]
+
+    }
+  case 'MOVE_TO_WATCHLIST':
+    return {
+      ...state,
+      favouritemovie: state.favouritemovie.filter((movie) => movie.id !== action.payload.id),
+      watchlist: [action.payload, ...state.watchlist]
+    }
+  case 'REMOVE_FROM_FAVOURITESMOV':
+    return {
+      ...state,
+      favouritemovie: state.favouritemovie.filter((movie) => movie.id !== action.payload)
+    }
    
   default:
    return state;
