@@ -13,6 +13,10 @@ export const FavouritesMov = () => {
      <h1 className="heading">
       My Favourite LeoMovies
      </h1>
+     {/* count favourites movies */}
+     <span className='count-pill'>
+      { favouritemovie.length } { favouritemovie.length === 1 ? 'favouritre movie' : 'favourites movies'}
+     </span>
     </div>
 
     {/* each movie */}

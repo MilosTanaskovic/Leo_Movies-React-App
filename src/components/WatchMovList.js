@@ -14,6 +14,11 @@ export const WatchMovList = () => {
      <h1 className="heading">
       My WatchList
      </h1>
+
+     {/* count watch movies */}
+     <span className='count-pill'>
+      { watchlist.length } { watchlist.length === 1 ? 'movie' : 'movies'}
+     </span>
     </div>
 
     {/* each movie */}

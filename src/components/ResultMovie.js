@@ -5,10 +5,17 @@ import Movie from './movie_poster/Movie';
 import { GlobalContext } from '../context/GlobalState';
 
 export const ResultMovie = ({movie}) => {
-  const { addMovieToWatchList, watchlist } = useContext(GlobalContext);
+  const { addMovieToWatchList, addMovieToFavouritemovie, watchlist, favouritemovie } = useContext(GlobalContext);
 
   let storedMovie = watchlist.find(obj => obj.id === movie.id);
-  const watchlistDisabled = storedMovie ? true : false;
+  let storedMovieFavourite = favouritemovie.find((obj) => obj.id === movie.id);
+
+  const watchlistDisabled = storedMovie 
+    ? true 
+    : storedMovieFavourite
+    ? true
+    : false;
+  const favouritemovieDisabled = storedMovieFavourite ? true : false;
 
  return (
   <div className='result-movie'>
@@ -25,6 +32,8 @@ export const ResultMovie = ({movie}) => {
 
       <div className='controls'>
         <button className='btn' disabled={watchlistDisabled} onClick={() => addMovieToWatchList(movie)}>Add To WatchList</button>
+
+        <button className='btn' disabled={favouritemovieDisabled} onClick={() => addMovieToFavouritemovie(movie)}>Add To Favourite</button>
       </div>
     </div>
   </div>
