@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {ResultMovie} from './ResultMovie';
 import axios from 'axios';
+import fetchMovies from '../api'
 
 export const LeoMoviesSearch = () => {
  const [query, setQuery] = useState('');
@@ -9,35 +10,14 @@ export const LeoMoviesSearch = () => {
 
  
 
- const changeHandler = (e) => {
+ const changeHandler = async (e) => {
   e.preventDefault();
-  //console.log(e.target.value);
-  setQuery(e.target.value);
-
-  // axios
+  const searchQuery = e.target.value
+  // setQuery();
  
-  //  axios({
-  //   method: 'GET',
-  //   url: `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_LEO_MOVIES_TMDB_API}&language=en-US&page=1&include_adult=false&query=${e.target.value}`
-  //  }).then((res) => {
-  //   setResults(res.data.results);
-  //   console.log(setResults(res.data.result));
-  //  })
- 
+  const movies = await fetchMovies(searchQuery)
 
- // fetch
-  fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_LEO_MOVIES_TMDB_API}&language=en-US&page=1&include_adult=false&query=${e.target.value}`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        //console.log(data);
-        if(!data.errors){
-         setResults(data.results);
-        }else{
-         setResults([]);
-        }
-      });
+  console.log(movies)
   
  };
 
