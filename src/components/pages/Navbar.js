@@ -1,5 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+// import routes
+import Routes from '../../constants/routes';
 
 export const Navbar = () => {
  return (
@@ -8,17 +10,17 @@ export const Navbar = () => {
     <div className='container'>
      <div className='inner-content'>
       <div className='brand'>
-       <Link to='/'>LeoMovies</Link>
+       <Link to={Routes.root}>LeoMovies</Link>
       </div>
       <ul className='nav-links'>
        <li>
-        <Link to='/watchlmlist'>Watch LM List</Link>
+        <Link to={Routes.watchlist}>Watch LM List</Link>
        </li>
        <li>
-        <Link to='/favouritesmov'>Favourites LM</Link>
+        <Link to={Routes.favourites}>Favourites LM</Link>
        </li>
        <li>
-        <Link to='/' className='btn'>Choose LM</Link>
+        <Link to={Routes.root} className='btn'>Choose LM</Link>
        </li>
       </ul>
      </div>

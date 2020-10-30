@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import {ResultMovie} from './ResultMovie';
 import Api from '../../api';
 
-export const LeoMoviesSearch = () => {
+export const MainPage = () => {
  // store API results
  const [results, setResults] = useState([]);
 

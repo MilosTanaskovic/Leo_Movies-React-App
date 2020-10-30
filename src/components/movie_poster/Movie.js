@@ -1,15 +1,14 @@
 import React from 'react'
-
-const Movie = ({movie}) => {
+import { getTmdbImage } from "../../helpers/utils";
+const Movie = (props) => {
+   const { movie } = props;
  return (
   <>
    { movie.poster_path ? (
-      <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} 
-      alt={`${movie.title}`}
-      />
-     ) : (
-      <div className="filler-poster"></div>
-     )}
+         <img src={getTmdbImage(movie.poster_path)} alt={`${movie.title}`} />
+      ) : (
+         <div className="filler-poster"></div>
+      )}
   </>
  )
 }
