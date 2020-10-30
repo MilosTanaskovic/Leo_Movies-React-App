@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {ResultMovie} from './ResultMovie';
-import Api from '../api';
+import Api from '../../api';
 
 export const LeoMoviesSearch = () => {
  // store API results

@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 
-import {GlobalContext} from '../context/GlobalState';
-import MovieListPoster from './movie_poster/MovieListPoster';
+import {GlobalContext} from '../../context/GlobalState';
+import MovieListPoster from '../movie_poster/MovieListPoster';
 
-export const FavouritesMov = () => {
+export const Favourites = () => {
  const { favouritemovie } = useContext(GlobalContext);
 
  return (

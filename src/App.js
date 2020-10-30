@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 // import components
-import { Header } from './components/Header';
-import { LeoMoviesSearch } from './components/LeoMoviesSearch';
-import { WatchMovList } from './components/WatchMovList';
-import { FavouritesMov } from './components/FavouritesMov';
+import { Navbar } from './components/pages/Navbar';
+import { LeoMoviesSearch } from './components/pages/LeoMoviesSearch';
+import { WatchList } from './components/pages/WatchList';
+import { Favourites } from './components/pages/Favourites';
 // import context
 import {GlobalProvider} from './context/GlobalState';
 // import style
@@ -19,14 +19,14 @@ function App() {
     // </div>
     <GlobalProvider>
       <Router>
-        <Header/>
+        <Navbar/>
 
         <Switch>
           <Route exact path='/watchlmlist'>
-            <WatchMovList/>
+            <WatchList/>
           </Route>
           <Route exact path='/favouritesmov'>
-            <FavouritesMov/>
+            <Favourites/>
           </Route>
           <Route exact path='/'>
             <LeoMoviesSearch/>
