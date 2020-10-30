@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 // import routes
-import Routes from '../../constants/routes';
+import Routes from '../constants/routes';
 
 export const Navbar = () => {
  return (

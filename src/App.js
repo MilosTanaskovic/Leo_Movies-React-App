@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 // import components
-import { Navbar } from './components/pages/Navbar';
-import { MainPage } from './components/pages/MainPage';
-import { WatchList } from './components/pages/WatchList';
-import { Favourites } from './components/pages/Favourites';
+import { Navbar } from './pages/Navbar';
+import { MainPage } from './pages/MainPage';
+import { WatchList } from './pages/WatchList';
+import { Favourites } from './pages/Favourites';
 // import context
 import {GlobalProvider} from './context/GlobalState';
 // import routes

@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 //import component
-import Movie from '../movie_poster/Movie';
+import Movie from '../components/movie_poster/Movie';
 // import context
-import { GlobalContext } from '../../context/GlobalState';
+import { GlobalContext } from '../context/GlobalState';
 
 export const ResultMovie = ({movie}) => {
   const { 

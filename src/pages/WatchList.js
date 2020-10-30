@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 // import context
-import {GlobalContext} from '../../context/GlobalState';
+import {GlobalContext} from '../context/GlobalState';
 // import component
-import MovieListPoster from '../movie_poster/MovieListPoster';
+import MovieListPoster from '../components/movie_poster/MovieListPoster';
 
 export const WatchList = () => {
  const {watchlist} = useContext(GlobalContext)
