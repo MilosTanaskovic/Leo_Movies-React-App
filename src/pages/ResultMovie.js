@@ -42,7 +42,7 @@ export const ResultMovie = ({movie}) => {
       </div>
 
       <div className='controls'>
-        <button className='ctrl-btn btn' disabled={watchlistDisabled} onClick={() => addMovieToWatchList(movie)}>
+        <button data-testid='button' className='ctrl-btn btn' disabled={watchlistDisabled} onClick={() => addMovieToWatchList(movie)}>
           <i class="fa-fw fa fa-eye"></i>
         </button>
 
