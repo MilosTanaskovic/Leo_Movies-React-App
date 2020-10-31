@@ -10,7 +10,7 @@ import {GlobalProvider} from './context/GlobalState';
 // import routes
 import Routes from './constants/routes';
 // import style
-import './App.css';
+import './App.scss';
 import './lib/font-awesome/css/all.min.css';
 
 function App() {

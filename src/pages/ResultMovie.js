@@ -3,6 +3,8 @@ import React, { useContext } from 'react'
 import Movie from '../components/movie_poster/Movie';
 // import context
 import { GlobalContext } from '../context/GlobalState';
+// import styles
+import './Main.scss';
 
 export const ResultMovie = ({movie}) => {
   const { 
@@ -40,9 +42,13 @@ export const ResultMovie = ({movie}) => {
       </div>
 
       <div className='controls'>
-        <button className='btn' disabled={watchlistDisabled} onClick={() => addMovieToWatchList(movie)}>Add To WatchList</button>
+        <button className='ctrl-btn btn' disabled={watchlistDisabled} onClick={() => addMovieToWatchList(movie)}>
+          <i class="fa-fw fa fa-eye"></i>
+        </button>
 
-        <button className='btn' disabled={favouritemovieDisabled} onClick={() => addMovieToFavouritemovie(movie)}>Add To Favourite</button>
+        <button className='ctrl-btn btn' disabled={favouritemovieDisabled} onClick={() => addMovieToFavouritemovie(movie)}>
+          <i class="fa-fw far fa-star"></i>
+        </button>
       </div>
     </div>
   </div>

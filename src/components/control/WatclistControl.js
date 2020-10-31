@@ -1,4 +1,6 @@
 import React from 'react'
+// import styles
+import './Main.scss';
 
 export const WatclistControl = ({movie, type, removeMovieFromWatchList, addMovieToFavouritemovie}) => {
  return (

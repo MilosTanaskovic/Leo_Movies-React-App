@@ -2,6 +2,8 @@ import React from 'react'
 
 import Movie from './Movie';
 import {MovieControls} from '../control/MovieControls';
+// import styles
+import './MovieListPoster.scss';
 
 const MovieListPoster = ({movie, type}) => {
  return (

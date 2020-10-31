@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import {ResultMovie} from './ResultMovie';
 import Api from '../api';
+// import styles
+import './MainPage.scss';
 
 export const MainPage = () => {
  // store API results
@@ -18,7 +20,6 @@ export const MainPage = () => {
 
  return (
   <div className='container'>
-   <div className='add-content'>
     <div className='input-wrapper'>
      <input type="text" name="" id="" placeholder='Search for a movie'
      onChange={onSearch} />
@@ -32,7 +33,6 @@ export const MainPage = () => {
       ))}
      </ul>
     )}
-   </div>
   </div>
  )
 }

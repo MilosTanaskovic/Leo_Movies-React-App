@@ -2,6 +2,9 @@ import React, { useContext } from 'react'
 
 import {GlobalContext} from '../context/GlobalState';
 import MovieListPoster from '../components/movie_poster/MovieListPoster';
+// import styles
+import './Main.scss';
+import './Favo&Watch.scss';
 
 export const Favourites = () => {
  const { favouritemovie } = useContext(GlobalContext);

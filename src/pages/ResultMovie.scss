@@ -1,0 +1,40 @@
+// ResultMovie
+
+.result-movie {
+  display: flex;
+  margin-bottom: 20px;
+
+  .poster-wrapper img {
+    width: 75px;
+    height: 113px;
+    background-color: #dbdada;
+    border-radius: 5px;
+    margin-right: 15px;
+    display: block;
+    color: transparent;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .info .title {
+    font-size: 1.25rem;
+    color:  #934332;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .info .release-date {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color:  #934332;
+    margin: 0;
+  }
+
+  .controls button {
+    margin-right: 10px;
+  }
+}

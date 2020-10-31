@@ -1,5 +1,6 @@
 import React from 'react'
-
+// import styles
+import './Main.scss';
 export const FavouritemovieControl = ({movie, type, moveToWatchlist, removeFromFavouritesMov}) => {
  return (
      <>

@@ -3,6 +3,10 @@ import React, { useContext } from 'react'
 import {GlobalContext} from '../context/GlobalState';
 // import component
 import MovieListPoster from '../components/movie_poster/MovieListPoster';
+// import styles
+import './Main.scss';
+import './ResultMovie.scss';
+import './Favo&Watch.scss';
 
 export const WatchList = () => {
  const {watchlist} = useContext(GlobalContext)

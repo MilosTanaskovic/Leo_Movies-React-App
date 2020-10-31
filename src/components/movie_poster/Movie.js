@@ -1,5 +1,8 @@
 import React from 'react'
 import { getTmdbImage } from "../../helpers/utils";
+// import styles
+import './Movie.scss';
+
 const Movie = (props) => {
    const { movie } = props;
  return (
